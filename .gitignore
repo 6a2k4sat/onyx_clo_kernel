@@ -1,0 +1,20 @@
+# Separate source branches
+/common/
+/msm-kernel/
+
+# Integration repositories
+/.susfs4ksu/
+# Generated build state
+/.source_date_epoch_dir/
+/out/
+/bazel-*
+/logs/
+/out-kernels/
+# Temporary files
+*.log
+*.orig
+*.rej
+*.swp
+*~
+# Maintained on separate branches
+# Temporary integration and build state
