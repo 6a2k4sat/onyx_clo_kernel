@@ -156,6 +156,8 @@ define_common_kernels(target_configs = {
         "protected_modules_list": ":gki_aarch64_protected_modules",
         "module_implicit_outs": get_gki_modules_list("arm64") + get_kunit_modules_list("arm64"),
         "make_goals": _GKI_AARCH64_MAKE_GOALS,
+        "clang_autofdo_profile": ":android/gki/aarch64/afdo/kernel.afdo",
+        "defconfig_fragments": ["arch/arm64/configs/autofdo_gki.fragment"],
         "ddk_headers_archive": ":kernel_aarch64_ddk_headers_archive",
         "extra_dist": [
             ":test_mappings_zip",
@@ -168,6 +170,7 @@ define_common_kernels(target_configs = {
         "outs": DEFAULT_GKI_OUTS,
         "defconfig_fragments": [
             "arch/arm64/configs/ksu_susfs.fragment",
+            "arch/arm64/configs/autofdo_gki.fragment",
         ],
         "kmi_symbol_list_strict_mode": True,
         "kmi_symbol_list": "android/abi_gki_aarch64",
@@ -177,6 +180,7 @@ define_common_kernels(target_configs = {
         "protected_modules_list": ":gki_aarch64_protected_modules",
         "module_implicit_outs": get_gki_modules_list("arm64") + get_kunit_modules_list("arm64"),
         "make_goals": _GKI_AARCH64_MAKE_GOALS,
+        "clang_autofdo_profile": ":android/gki/aarch64/afdo/kernel.afdo",
         "build_gki_artifacts": True,
         "gki_boot_img_sizes": {
             "": "67108864",
