@@ -168,7 +168,9 @@ define_common_kernels(target_configs = {
         "arch": "arm64",
         "build_config": "build.config.gki.aarch64",
         "outs": DEFAULT_GKI_OUTS,
+        "clang_autofdo_profile": ":android/gki/aarch64/afdo/kernel.afdo",
         "defconfig_fragments": [
+            "arch/arm64/configs/autofdo_gki.fragment",
             "arch/arm64/configs/ksu_susfs.fragment",
         ],
         "kmi_symbol_list_strict_mode": True,
